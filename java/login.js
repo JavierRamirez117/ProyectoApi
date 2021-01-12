@@ -1,4 +1,4 @@
-const alreadyLoggedIn = localStorage.getItem('loggedIn')
+const alreadyLoggedIn = sessionStorage.getItem('loggedIn')
 if(alreadyLoggedIn) {
     window.location.href = "/API.html";
 }
@@ -16,9 +16,10 @@ function login() {
 
     const user  = users.find((user) => user.email === email && user.password === password);
     if(user) {
-        localStorage.setItem('loggedIn', 'true') 
+        sessionStorage.setItem('loggedIn', 'true') 
         window.location.replace("/API.html");
     } else {
         alert('Usuario y/o Contraseña incorrectos')
     }
 }
+
