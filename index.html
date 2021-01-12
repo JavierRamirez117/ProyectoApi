@@ -8,21 +8,27 @@
 </head>
 <body>
     <div class="container mt-5  ">
-        <div class="card bg-blue col-xs-6 col-md-4 text-center mx-auto">
-            <div class="card-body ">
-                <form id="form-user" onsubmit="event.preventDefault(), addUser()" action="">
-                    <div class="form-group">
-                        <label for="exampleInputEmail1">Correo</label>
-                        <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Introducir Correo">
-                        <small id="emailHelp" class="form-text text-muted"></small>
-                      </div>
-                      <div class="form-group">
-                        <label for="exampleInputPassword1">Contraseña</label>
-                        <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Introducir Contraseña">
-                      </div>
-                    <button type="submit" id="save" class="btn btn-primary">Enviar</button>
-                </form>
-            </div>
+        <div class="row justify-content-center">
+            <div class="card col-xs-6 col-md-4 ">
+                <div class="card-body ">
+                    <h6 class="text-center">Inicia Sesion</h6>
+                    <hr>
+                    <form onsubmit="event.preventDefault(), login()" action="/validate-login">
+                        <div class="form-group">
+                            <label for="email">Correo</label>
+                            <input type="email" class="form-control" id="email" placeholder="Introducir Correo">
+                            <small id="emailHelp" class="form-text text-muted"></small>
+                          </div>
+                          <div class="form-group">
+                            <label for="password">Contraseña</label>
+                            <input type="password" class="form-control" id="password" placeholder="Introducir Contraseña">
+                          </div>
+                          <br>
+                        <button type="submit" id="save" class="btn btn-primary">Enviar</button>
+                    </form>
+                </div>
         </div>
+    </div>
+    <script src="./java/login.js"></script>
 </body>
 </html>
