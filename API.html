@@ -1,18 +1,19 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es_mx">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="./css/styles.css">
 </head>
-<body>
+<body class="background-Api">
     <div class="container mt-5">
         <div class="row justify-content-center">
             <div class="col-md-6">
                 <div class="card">
                     <div class="card-body">
-                        <form action="/questions" onsubmit="event.preventDefault(), getQuestions()">
+                        <form id="form-questions" action="/questions" onsubmit="event.preventDefault(), getQuestions()" >
                             <div class="form-group">
                                 <label for="total-questions">Cantidad de preguntas</label>
                                 <select class="form-control" id="total-questions">
@@ -28,6 +29,16 @@
                                 <select class="form-control" id="select-category">
                                 </select>
                             </div>
+                            <div class="form-group">
+                                <label for="select-category">Dificultad</label>
+                                <select class="form-control" id="Dificulty">
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="select-category">Tipo de preguntas (Opcion multible o verdadero o falso)</label>
+                                <select class="form-control" id="Kindofquestions">
+                                </select>
+                            </div>
                             <button type="submit" class="btn btn-primary">Obtener preguntas</button>
                         </form>
                     </div>
@@ -38,6 +49,6 @@
             <!-- Aquí va el contenido -->
         </div>
     </div>
-    <script src="./java/Api.js"></script>
+    <script type="module" src="./java/main.js"></script>
 </body>
 </html>

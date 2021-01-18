@@ -1,0 +1,11 @@
+.background-login {
+    background-image: url('./images/backgroundlogin.jpg');
+    background-size: cover;
+    margin: auto;
+}
+
+.background-Api {
+    background-image: url('./images/backgroundapi.jpg');
+    background-size: cover;
+    margin: auto;
+}
