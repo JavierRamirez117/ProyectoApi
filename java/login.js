@@ -1,3 +1,5 @@
+alert("correo : testxD@hotmail.com contraseña test");
+
 const alreadyLoggedIn = sessionStorage.getItem('loggedIn')
 if(alreadyLoggedIn) {
     window.location.href = "/API.html";

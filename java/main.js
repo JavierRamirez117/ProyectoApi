@@ -17,14 +17,9 @@ Request.getCategories()
 
 const div = document.querySelector('#difficultys');
 
-div.addEventListener('submit',(event) => {
-    event.preventDefault();
+div.addEventListener('submit',() => {
     Request.getdifficulty()
     .then(response => response.json())
     .then(data => UI.printdificulty(data.results))
 })
-
-Request.getdifficulty()
-    .then(response => response.json())
-    .then(data => UI.printdifficulty(data.results[0].difficulty))
 
