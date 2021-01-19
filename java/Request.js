@@ -6,11 +6,16 @@ export default class Request {
         const [amount, category] = this.getFilters();
         return fetch(`https://opentdb.com/api.php?amount=${amount}&category=${category}`)
     }
+    
+    static getdifficulty() {
+        const [amount,difficulty ] = this.getFilters();
+        return fetch(`https://opentdb.com/api.php?${amount}&difficulty=${difficulty}`)
+    }
+    
     static getFilters() {
         const totalQuestions = document.getElementById('total-questions').value;
         const category = document.getElementById('categories').value;
-        const dificulty = document.getElementById('Dificulty').value;
-        const kindofquestions = document.getElementById('Kindofquestions').value;
-        return [totalQuestions, category,dificulty,kindofquestions];
+        const difficulty = document.getElementById('difficultys').value;
+        return [totalQuestions, category,difficulty];
     }
 }

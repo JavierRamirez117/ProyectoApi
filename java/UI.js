@@ -5,7 +5,15 @@ export default class UI {
             container.innerHTML += `<option value="${category.id}">${category.name}</option>`;
         });
     }
-    
+
+    static printdifficulty(difficultys) {
+        const container = document.getElementById('difficultys');
+        difficultys.forEach(difficulty => {
+            container.innerHTML += `<option value="${difficulty.id}">${difficulty.name}</option>`;
+        })
+    }
+
+
     static printQuestions(questions) {
         const container = document.getElementById('questions-container');
         container.innerHTML = '';

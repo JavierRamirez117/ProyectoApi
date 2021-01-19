@@ -13,7 +13,7 @@
             <div class="col-md-6">
                 <div class="card">
                     <div class="card-body">
-                        <form id="form-questions" action="/questions" onsubmit="event.preventDefault(), getQuestions()" >
+                        <form  action="/questions" onsubmit="event.preventDefault(),getQuestions()" id="form-questions">
                             <div class="form-group">
                                 <label for="total-questions">Cantidad de preguntas</label>
                                 <select class="form-control" id="total-questions">
@@ -26,12 +26,12 @@
                             </div>
                             <div class="form-group">
                                 <label for="select-category">Categoría</label>
-                                <select class="form-control" id="select-category">
+                                <select class="form-control" id="categories">
                                 </select>
                             </div>
-                            <div class="form-group">
+                            <div class="form-group" onsubmit="event.preventDefault(),getdifficulty()">
                                 <label for="select-category">Dificultad</label>
-                                <select class="form-control" id="Dificulty">
+                                <select class="form-control" id="difficultys">
                                 </select>
                             </div>
                             <div class="form-group">
@@ -45,7 +45,7 @@
                 </div>
             </div>
         </div>
-        <div class="row" id="questions-container">
+        <div class="row" id="questions-container dificult-container">
             <!-- Aquí va el contenido -->
         </div>
     </div>
